@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-38-traffic-controller",
+  "eyebrow": "PICOKIT // LESSON 38",
+  "title": "PICOKIT // TRAFFIC CONTROLLER",
+  "subtitle": "TIMED INTERSECTION PHASES + PEDESTRIAN REQUEST + AUTHENTICATED HEARTBEAT",
+  "accent": "#007EFF",
+  "dim": "#004E9E",
+  "white": "#D0E4FF",
+  "cyan": "#7FD8E0",
+  "bg": "#000811",
+  "bg_edge": "#000205",
+  "icon": "gauge",
+  "panel_status": "PHASE 3  ·  PED LATCH  ·  RED 5 s",
+  "chips": [
+    {
+      "label": "PHASE",
+      "value": "3 / 4"
+    },
+    {
+      "label": "GREEN",
+      "value": "4 s"
+    },
+    {
+      "label": "PED",
+      "value": "request"
+    },
+    {
+      "label": "RADIO",
+      "value": "-29 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00038  seq 21  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 21",
+    "[+] phase 2 yellow  pedestrian pending",
+    "[+] phase 3 red walk  ack sent  rssi -29"
+  ],
+  "categories": [
+    "PHASE",
+    "PED",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "TC-01",
+      "label": "green",
+      "value": "4 s"
+    },
+    {
+      "tag": "TC-02",
+      "label": "yellow",
+      "value": "2 s"
+    },
+    {
+      "tag": "TC-03",
+      "label": "ped",
+      "value": "5 s"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  PHASE  ·  PED  ·  RADIO  ==[ TRAFFIC ]=="
+  ],
+  "layout": "terminal",
+  "stat": "3 / 4"
+}
